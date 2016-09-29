@@ -1,5 +1,6 @@
 package programaciondmi.per.main;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
@@ -13,7 +14,7 @@ public class Logic {
 	
 	public Logic(PApplet app){
 		this.app= app;
-		this.controlBD= new ControlBaseDatos("data/bolitas.xml");
+		this.controlBD= new ControlBaseDatos("data"+File.separator+"bolitas.xml");
 		this.bolitas = controlBD.leerBolitas();
 	}
 
